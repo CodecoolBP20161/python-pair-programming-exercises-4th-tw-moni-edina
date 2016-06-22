@@ -4,8 +4,8 @@ from person import Person
 
 
 def open_csv(file_name):
-    # implent this function
-    pass  # delete this
+    with open(file_name, "r") as file:
+        lines = file.readlines()
 
 
 def get_csv_file_name(argv_list):
@@ -20,6 +20,8 @@ def format_output(person):
 
 def get_person_by_phone_number(person_list, user_input_phone_number):
     # implent this function
+    # if self.number is in lines
+        # print This number belongs to:
     pass  # delete this
 
 
