@@ -6,23 +6,26 @@ from person import Person
 def open_csv(file_name):
     with open(file_name, "r") as file:
         lines = file.readlines()
+        name = lines[0]
+        phone_number = lines[1]
 
 
 def get_csv_file_name(argv_list):
-    # implent this function
-    pass  # delete this
+    if argv_list == None:
+        return None
+    return argv_list[1]
 
 
 def format_output(person):
-    # implent this function
-    pass  # delete this
+    print("This number belongs to {}.".format(person))
 
 
 def get_person_by_phone_number(person_list, user_input_phone_number):
-    # implent this function
-    # if self.number is in lines
-        # print This number belongs to:
-    pass  # delete this
+    for person in person_list:
+        if person.is_phone_number_matching(user_input_phone_number):
+            return person
+        else:
+            print("This number isn't in the list.")
 
 
 def main():
