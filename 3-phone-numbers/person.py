@@ -10,10 +10,7 @@ class Person():
         return self._phone_number == input_phone_number
 
     def get_name(self):
-        if self.is_phone_number_matching:
-            return self._name
-        else:
-            return "This number is not matching."
+        return self._name
 
     @staticmethod
     def normalize_phone_number(phone_number):
